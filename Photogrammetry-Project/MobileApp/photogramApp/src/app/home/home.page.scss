@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  ion-row {
+      ion-col {
+          width: 50%;
+          text-align: center;
+      }
+  }
+}
