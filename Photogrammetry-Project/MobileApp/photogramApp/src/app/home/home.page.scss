@@ -29,10 +29,66 @@
 }
 
 ion-header {
-  --background: #{map-get($colors, primary)};
+  ion-toolbar {
+    --background: #{map-get($colors, light)};
+    color: #{map-get($colors, light)};
+    ion-buttons {
+      ion-button {
+        ion-icon {
+          --background: black;
+          color: black;
+        }
+      }
+    }
+    ion-title {
+      color: black;
+    }
+  }
 }
 
 ion-content {
+  ion-card {
+    position: relative;
+    text-align: center;
+    &.card1 {
+      .card-title {
+        margin-bottom: 10px; 
+      }
+    
+      .card-subtitle {
+        margin-top: 10px; 
+      }
+    }
+    img {
+      opacity: 80%;
+      filter: blur(2px);
+    }
+    &.card2 {
+      .card-title {
+        margin-bottom: -10px;
+      }
+      .card-subtitle {
+        margin-top: -10px;
+      }
+    }
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+      -webkit-text-stroke: 0.001px black;
+    }
+    .card-subtitle {
+      position: absolute;
+      top: 52%;
+      font-size: 1.0em;
+      width: 100%;
+      color: #fff;
+      -webkit-text-stroke: 0.001px black;
+    }
+  }
   ion-row {
       ion-col {
           width: 50%;

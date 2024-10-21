@@ -1,11 +1,12 @@
 <ion-header [translucent]="true">
 
   <ion-toolbar>
-    <ion-buttons>
+    <ion-buttons slot="start">
       <ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 
   <ion-toolbar>
@@ -14,18 +15,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Banana</strong>
-    <ion-row>
-      <ion-col>
-        <ion-button id="button"><b>Testing</b></ion-button>
-      </ion-col>
-    </ion-row>
-  </div>
+  <ion-card id="card1" class="card1">
+    <img src="assets/imgs/photogrampic.jpg"> <!--https://bitfab.io/blog/photogrammetry/-->
+    <div class="card-title">Photogrammetry</div>
+    <div class="card-subtitle">Utilize the Photogrammetry Function</div>
+  </ion-card>
+
+  <ion-card id="card2" class="card2">
+    <img src="assets/imgs/takeatourpic.png"> <!--Ryan Beckford Laptop Meme-->
+    <div class="card-title">Take a Tour</div>
+    <div class="card-subtitle">Explore the Mobile App</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/projectspic.jpg"> <!--https://www.linkedin.com/pulse/importance-project-development-jose-diego-monroy-cfm-->
+    <div class="card-title">Check Projects</div>
+    <div class="card-subtitle">See your 3D Projects</div>
+  </ion-card>
+
 </ion-content>
