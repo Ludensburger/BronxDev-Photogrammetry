@@ -1,8 +1,15 @@
 <ion-header [translucent]="true">
+
   <ion-toolbar>
-    <ion-title>
-      Ionic Test
-    </ion-title>
+    <ion-buttons>
+      <ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +24,7 @@
     <strong>Banana</strong>
     <ion-row>
       <ion-col>
-        <ion-button><b>Testing</b></ion-button>
+        <ion-button id="button"><b>Testing</b></ion-button>
       </ion-col>
     </ion-row>
   </div>

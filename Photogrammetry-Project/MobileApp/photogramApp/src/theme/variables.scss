@@ -1,2 +1,10 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+$colors: (
+    primary: white,
+    secondary: rgb(53, 169, 208),
+    danger: red,
+    light: lightgray,
+    dark: gray
+);

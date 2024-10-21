@@ -1,3 +1,5 @@
+@import '../../theme/variables';
+
 #container {
   text-align: center;
 
@@ -26,11 +28,18 @@
   text-decoration: none;
 }
 
+ion-header {
+  --background: #{map-get($colors, primary)};
+}
+
 ion-content {
   ion-row {
       ion-col {
           width: 50%;
           text-align: center;
+          #button:hover {
+            --background: #{map-get($colors, danger)};
+          }
       }
   }
 }
