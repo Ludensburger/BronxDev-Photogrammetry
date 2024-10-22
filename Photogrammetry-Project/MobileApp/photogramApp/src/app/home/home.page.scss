@@ -41,7 +41,10 @@ ion-header {
       }
     }
     ion-title {
-      color: black;
+      img {
+        width: 10%;
+        height: 10%;
+      }
     }
   }
 }
