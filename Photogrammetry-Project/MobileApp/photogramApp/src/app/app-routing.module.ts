@@ -10,7 +10,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'take-tour',
+    loadChildren: () => import('./take-tour/take-tour.module').then( m => m.TakeTourPageModule)
   },
+  {
+    path: 'photogrammetry',
+    loadChildren: () => import('./photogrammetry/photogrammetry.module').then( m => m.PhotogrammetryPageModule)
+  },
+  {
+    path: 'projects',
+    loadChildren: () => import('./projects/projects.module').then( m => m.ProjectsPageModule)
+  },
+
 ];
 
 @NgModule({

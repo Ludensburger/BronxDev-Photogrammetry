@@ -1,0 +1,17 @@
+@import '../../theme/variables';
+
+ion-header {
+    ion-toolbar {
+        --background: #{map-get($colors, secondary)};
+        color: #{map-get($colors, secondary)};
+        ion-buttons {
+            color: black;
+        }
+    }
+}
+
+ion-content {
+    p {
+        text-align: center;
+    }
+}

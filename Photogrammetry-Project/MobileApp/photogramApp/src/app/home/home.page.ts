@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,20 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
 
+  onCard1Click() {
+    console.log('Card 1 clicked');
+    this.navCtrl.navigateForward('/photogrammetry');
+  }
+
+  onCard2Click() {
+    console.log('Card 2 clicked');
+    this.navCtrl.navigateForward('/take-tour');
+  }
+
+  onCard3Click() {
+    console.log('Card 3 clicked');
+    this.navCtrl.navigateForward('/projects');
+  }
 }

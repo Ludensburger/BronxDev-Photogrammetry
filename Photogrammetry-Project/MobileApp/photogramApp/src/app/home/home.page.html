@@ -18,20 +18,20 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
 
-  <ion-card id="card1" class="card1">
+  <ion-card id="card1" class="card1" (click)="onCard1Click()">
     <img src="assets/imgs/photogrampic.jpg"> <!--https://bitfab.io/blog/photogrammetry/-->
     <div class="card-title">Photogrammetry</div>
     <div class="card-subtitle">Utilize the Photogrammetry Function</div>
   </ion-card>
 
-  <ion-card id="card2" class="card2">
+  <ion-card id="card2" class="card2" (click)="onCard2Click()">
     <img src="assets/imgs/takeatourpic.png"> <!--Ryan Beckford Laptop Meme-->
     <div class="card-title">Take a Tour</div>
     <div class="card-subtitle">Explore the Mobile App</div>
   </ion-card>
 
   <ion-card>
-    <img src="assets/imgs/projectspic.jpg"> <!--https://www.linkedin.com/pulse/importance-project-development-jose-diego-monroy-cfm-->
+    <img src="assets/imgs/projectspic.jpg" (click)="onCard3Click()"> <!--https://www.linkedin.com/pulse/importance-project-development-jose-diego-monroy-cfm-->
     <div class="card-title">Check Projects</div>
     <div class="card-subtitle">See your 3D Projects</div>
   </ion-card>
