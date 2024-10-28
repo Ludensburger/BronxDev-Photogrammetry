@@ -1,0 +1,28 @@
+ion-header {
+    #headerimg {
+        width: 100%;
+    }
+}
+
+ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    b {
+        margin: 0;
+        font-size: 30px;
+    }
+    p {
+        margin: 0;
+        padding-left: 20px; /* Adjust the value as needed */
+        padding-right: 20px; /* Adjust the value as needed */
+    }
+
+    #buttons {
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+    }
+}
