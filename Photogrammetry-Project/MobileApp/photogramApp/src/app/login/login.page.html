@@ -3,20 +3,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div id="container">
+    <b>Welcome</b>
+    <p style="font-size: 18px; margin-top: 30px;">This Photogrammetry app will revolutionize creator-client understanding with a simple 'pic' of a design</p>
 
-  <b>Welcome</b>
-  <p style="font-size: 18px;">This Photogrammetry app will revolutionize creator-client understanding with a simple 'pic' of a design</p>
+    <div id="buttons">
+      <div class="width-limit">
+        <ion-button expand="block" (click)="onLoginClick()" id="login-btn">Login</ion-button>
+      </div>
+      <div class="width-limit">
+        <ion-button expand="block" id="signup-btn">Sign Up</ion-button>
+      </div>
+    </div>
+    
+    <p style="margin-bottom: 30px;">Or via Social Media</p>
 
-  <div id="buttons">
-    <ion-button (click)="onLoginClick()">Login</ion-button>
-    <ion-button>Sign Up</ion-button>
-  </div>
-  
-  <p style="margin-bottom: 30px;">Or via Social Media</p>
-
-  <div id="social-media-icons">
-    <img src="/assets/imgs/apple.png" style="margin-right: 10px;">
-    <img src="/assets/imgs/facebook.png" style="margin-right: 10px;">
-    <img src="/assets/imgs/google.png">
+    <div id="social-media-icons">
+      <img src="/assets/imgs/apple.png" style="margin-right: 10px;">
+      <img src="/assets/imgs/facebook.png" style="margin-right: 10px;">
+      <img src="/assets/imgs/google.png">
+    </div>
   </div>
 </ion-content>

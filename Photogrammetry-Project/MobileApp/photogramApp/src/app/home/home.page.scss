@@ -28,12 +28,22 @@
   text-decoration: none;
 }
 
+ion-menu {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        color: black;
+      }
+    }
+  }
+}
+
 ion-header {
   ion-toolbar {
-    --background: #{map-get($colors, light)};
+    --background: #{map-get($colors, primary)};
     color: #{map-get($colors, light)};
     ion-buttons {
-      ion-button {
+      ion-menu-button {
         ion-icon {
           --background: black;
           color: black;

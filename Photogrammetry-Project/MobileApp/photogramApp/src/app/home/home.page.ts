@@ -24,4 +24,8 @@ export class HomePage {
     console.log('Card 3 clicked');
     this.navCtrl.navigateForward('/projects');
   }
+
+  onSignOut() {
+    this.navCtrl.navigateBack('/login');
+  }
 }
