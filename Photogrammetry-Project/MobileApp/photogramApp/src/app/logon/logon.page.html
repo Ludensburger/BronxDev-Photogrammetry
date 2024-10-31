@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <img src="/assets/imgs/header1.png" id="headerimg">
+  <ion-button fill="clear" (click)="onBackArrowClick()" id="backarrow">
+    <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+  </ion-button>
+  <ion-title id="title">Welcome</ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div id="container">
+    <ion-list class="bg-transparent">
+      <ion-item color="blue">
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-input id="uName" placeholder="email@address.com"></ion-input>
+      </ion-item>
+      <ion-item color="blue">
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-input id="pWord" type="Password" placeholder="*****"></ion-input>
+      </ion-item>
+    </ion-list>
+    <b style="text-align: right;">Forgot Password</b>
+
+    <div id="buttons">
+      <div class="width-limit">
+        <ion-button expand="block" (click)="onLoginClick()" id="login-btn">Login</ion-button>
+      </div>
+    </div>
+    
+    <p style="margin-bottom: 30px;">Login Via</p>
+
+    <div id="social-media-icons">
+      <img src="/assets/imgs/apple.png" style="margin-right: 10px;">
+      <img src="/assets/imgs/facebook.png" style="margin-right: 10px;">
+      <img src="/assets/imgs/google.png">
+    </div>
+  </div>
+</ion-content>

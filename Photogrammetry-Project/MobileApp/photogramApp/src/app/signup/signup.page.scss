@@ -1,0 +1,13 @@
+@import '../../theme/variables';
+
+ion-header {
+    color: gray;
+    ion-title, p {
+        text-align: center;
+    }
+}
+
+ion-content {
+    text-align: center;
+    --ion-background-color: #{map-get($colors, primary)};
+}

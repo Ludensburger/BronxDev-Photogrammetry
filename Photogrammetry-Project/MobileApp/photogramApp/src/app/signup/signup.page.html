@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-button fill="clear" (click)="onBackArrowClick()" id="backarrow">
+    <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+  </ion-button>
+  <ion-title>Sign Up</ion-title>
+  <p>Create your account by filling up the form</p>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div id="container">
+    <ion-list class="bg-transparent">
+      <ion-item color="blue">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-input id="uName" placeholder="Input Username"></ion-input>
+      </ion-item>
+      <ion-item color="blue">
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-input id="eMail" placeholder="Input Email"></ion-input>
+      </ion-item>
+      <ion-item color="blue">
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+        <ion-input id="pWord" type="Password" placeholder="*****"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div id="buttons">
+      <div class="width-limit">
+        <ion-button expand="block" id="login-btn">Sign Up</ion-button>
+      </div>
+    </div>
+    
+    <p style="margin-bottom: 30px;">Sign up with</p>
+
+    <div id="social-media-icons">
+      <img src="/assets/imgs/apple.png" style="margin-right: 10px;">
+      <img src="/assets/imgs/facebook.png" style="margin-right: 10px;">
+      <img src="/assets/imgs/google.png">
+    </div>
+  </div>
+</ion-content>

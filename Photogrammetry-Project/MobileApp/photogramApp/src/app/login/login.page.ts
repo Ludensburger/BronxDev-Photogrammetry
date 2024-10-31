@@ -14,6 +14,10 @@ export class LoginPage implements OnInit {
   }
 
   onLoginClick() {
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateForward('/logon');
+  }
+
+  onSignupClick() {
+    this.navCtrl.navigateForward('/signup');
   }
 }

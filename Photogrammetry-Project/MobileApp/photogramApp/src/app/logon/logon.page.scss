@@ -1,0 +1,66 @@
+@import '../../theme/variables';
+
+ion-header {
+    position: relative;
+
+    #headerimg {
+        width: 100%;
+    }
+
+    #backarrow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        font-size: 100px;
+    }
+
+    ion-title {
+        position: absolute;
+        font-size: 30px;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+}
+
+ion-content {
+    text-align: center;
+    --ion-background-color: #{map-get($colors, primary)};
+
+    .bg-transparent {
+        background: transparent;
+    }
+
+    ion-item {
+        color: #647B9D;
+        --border-color: #D4D7DB;
+        --hightlight-color-focused: #1248A0;
+        --padding-start: 0;
+        --inner-padding-end: 0;
+
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        .width-limit {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 120px;
+        } 
+    }
+
+    b {
+        color: #325892;
+    }
+
+    p {
+        color: #325892;
+    }
+}
