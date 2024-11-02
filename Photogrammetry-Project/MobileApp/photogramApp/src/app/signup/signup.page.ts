@@ -7,6 +7,15 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
+  isAlertOpenSuccess = false;
+  alertButtons = [
+    {
+      text: 'OK',
+      handler: () => {
+        this.navCtrl.navigateBack('/login');
+      }
+    }
+  ];
 
   constructor(private navCtrl: NavController) { }
 
@@ -15,5 +24,9 @@ export class SignupPage implements OnInit {
 
   onBackArrowClick() {
     this.navCtrl.navigateBack('/login');
+  }
+
+  myClick(isOpen: boolean) {
+    this.isAlertOpenSuccess = isOpen;
   }
 }

@@ -2,7 +2,13 @@
 
 ion-header {
     color: gray;
-    ion-title, p {
+    ion-title {
+        font-size: 30px;
+        color: rgb(43, 43, 43);
+        margin-top: 40px;
+        text-align: center;
+    }
+    p {
         text-align: center;
     }
 }
@@ -10,4 +16,41 @@ ion-header {
 ion-content {
     text-align: center;
     --ion-background-color: #{map-get($colors, primary)};
+
+    .bg-transparent {
+        background: transparent;
+    }
+
+    ion-item {
+        margin-bottom: 10px;
+        color: #455368;
+        --border-color: #D4D7DB;
+        --hightlight-color-focused: #1248A0;
+        --padding-start: 0;
+        --inner-padding-end: 0;
+    }
+
+    #buttons {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .width-limit {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 150px;
+        } 
+        #sign-up {
+            font-size: 15px;
+            color: white;
+            --border-radius: 15px;
+        }
+    }
+
+    #with {
+        font-size: 20px;
+        color: black;
+    }
 }

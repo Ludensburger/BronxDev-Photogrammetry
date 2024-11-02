@@ -11,25 +11,46 @@
     <ion-list class="bg-transparent">
       <ion-item color="blue">
         <ion-icon name="person-outline" slot="start"></ion-icon>
-        <ion-input id="uName" placeholder="Input Username"></ion-input>
+        <ion-input 
+          id="uName" 
+          placeholder="Input Username"
+          ></ion-input>
       </ion-item>
-      <ion-item color="blue">
+      <ion-item color="blue" lines="none">
         <ion-icon name="mail" slot="start"></ion-icon>
-        <ion-input id="eMail" placeholder="Input Email"></ion-input>
+        <ion-input 
+          id="eMail" 
+          type="email" 
+          placeholder="Input Email"
+          errorText="Invalid email"
+          ngModel
+          email
+          ></ion-input>
       </ion-item>
       <ion-item color="blue">
         <ion-icon name="lock-closed" slot="start"></ion-icon>
-        <ion-input id="pWord" type="Password" placeholder="*****"></ion-input>
+        <ion-input 
+          id="pWord" 
+          type="Password" 
+          placeholder="*****"
+          ></ion-input>
       </ion-item>
     </ion-list>
 
     <div id="buttons">
       <div class="width-limit">
-        <ion-button expand="block" id="login-btn">Sign Up</ion-button>
+        <ion-button expand="block" id="sign-up" (click)="myClick(true)">Sign Up</ion-button>
+        <ion-alert
+        [isOpen]="isAlertOpenSuccess"
+        header="Success"
+        message="Account has been created"
+        [buttons]="alertButtons"
+        (didDismiss)="myClick(false)"
+      ></ion-alert>
       </div>
     </div>
     
-    <p style="margin-bottom: 30px;">Sign up with</p>
+    <p style="margin-bottom: 30px;" id="with">Sign up with</p>
 
     <div id="social-media-icons">
       <img src="/assets/imgs/apple.png" style="margin-right: 10px;">
