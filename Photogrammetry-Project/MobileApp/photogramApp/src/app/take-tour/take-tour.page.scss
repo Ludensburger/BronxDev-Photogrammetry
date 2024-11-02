@@ -5,7 +5,7 @@ ion-header {
         --background: #{map-get($colors, black)};
         color: #{map-get($colors, secondary)};
         ion-buttons {
-            color: black;
+            color: rgb(255, 255, 255);
         }
     }
 }
