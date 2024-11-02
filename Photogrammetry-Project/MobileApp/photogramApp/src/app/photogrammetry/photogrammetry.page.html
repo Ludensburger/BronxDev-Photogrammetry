@@ -1,17 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons>
-      <ion-button (click)="returnHome()">
-        Home
+      <ion-button (click)="returnHome()" id="home">
+       Home
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">photogrammetry</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+    <div id="background">
+      <img src="/assets/imgs/photogramfunc.png">
+      <ion-icon id="takepic" name="radio-button-off"></ion-icon>
+    </div> 
+    
+  
+
 </ion-content>

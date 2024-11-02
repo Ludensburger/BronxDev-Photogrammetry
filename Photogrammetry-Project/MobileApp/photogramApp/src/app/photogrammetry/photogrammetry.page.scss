@@ -1,0 +1,26 @@
+#background {
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    position: relative; 
+    z-index: 1;
+}
+
+#background img {
+    width: 100%; 
+    height: auto; 
+}
+
+#takepic {
+    align-items: center;
+    background-color: grey;
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px; 
+    position: absolute; 
+    left: 50%; 
+    bottom: 170px; 
+    transform: translateX(-50%); 
+    z-index: 2; 
+}
+
