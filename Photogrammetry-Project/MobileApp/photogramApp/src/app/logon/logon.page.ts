@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
 import { User } from './model';
 
 @Component({
@@ -9,8 +10,9 @@ import { User } from './model';
 })
 export class LogonPage implements OnInit {
   user = new User("example@static.net", "password1");
-  usernameInp!: string;
-  passwordInp!: string;
+  usernameInp: string = '';
+  passwordInp: string = '';
+
   isAlertOpenSuccess = false;
   isAlertOpenFailed = false;
   alertButtonFailed = [
@@ -29,7 +31,7 @@ export class LogonPage implements OnInit {
     }
   ];
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController, private authService: AuthService) { }
 
   ngOnInit() {
     this.logUserCredentials();
@@ -45,15 +47,21 @@ export class LogonPage implements OnInit {
   }
 
   onLoginClick(isOpen: boolean) {
-    this.usernameInp = (document.getElementById('uName') as HTMLInputElement).value;
-    this.passwordInp = (document.getElementById('pWord') as HTMLInputElement).value;
-
-    if (this.usernameInp === this.user.getUsername() && this.passwordInp === this.user.getPassword()){
-      this.isAlertOpenSuccess = isOpen;
-
-    } else {
-      this.isAlertOpenFailed = isOpen;
-
-    }
+    console.log(`Attempting to log in with email: ${this.usernameInp}`);
+    this.authService.loginUser({ email: this.usernameInp, password: this.passwordInp }).subscribe({
+      next: (response: any) => {
+        if (response.message === 'Login successful') {
+          console.log('Login successful');
+          this.isAlertOpenSuccess = isOpen;
+        } else {
+          console.log('Login failed');
+          this.isAlertOpenFailed = isOpen;
+        }
+      },
+      error: (error) => {
+        console.error('Login failed', error);
+        this.isAlertOpenFailed = isOpen;
+      }
+    });
   }
 }
