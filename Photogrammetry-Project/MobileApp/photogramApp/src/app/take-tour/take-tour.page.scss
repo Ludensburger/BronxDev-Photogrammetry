@@ -1,14 +1,5 @@
 @import '../../theme/variables';
 
-ion-header {
-    ion-toolbar {
-        --background: #{map-get($colors, black)};
-        color: #{map-get($colors, secondary)};
-        ion-buttons {
-            color: rgb(255, 255, 255);
-        }
-    }
-}
 
 ion-content {
     p {
@@ -16,30 +7,3 @@ ion-content {
     }
 }
 
-.cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: row;
-    gap: 10px;
-}
-
-.test{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: row;
-    gap: 10px;
-}
-
-ion-card{
-    width: 150px;
-    height: auto;
-    overflow: hidden;
-}
-
-ion-card-header{
-    ion-card-title{
-        font-size: 12px;
-    }
-}
