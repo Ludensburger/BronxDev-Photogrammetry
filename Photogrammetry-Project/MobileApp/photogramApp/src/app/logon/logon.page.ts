@@ -10,23 +10,14 @@ import { User } from './model';
 })
 export class LogonPage implements OnInit {
   user = new User("example@static.net", "password1");
-  usernameInp: string = '';
+  emailInp: string = '';
   passwordInp: string = '';
 
-  isAlertOpenSuccess = false;
   isAlertOpenFailed = false;
   alertButtonFailed = [
     {
       text: 'OK',
       handler: () => {
-      }
-    }
-  ];
-  alertButtonSuccess = [
-    {
-      text: 'OK',
-      handler: () => {
-        this.navCtrl.navigateForward('/home')
       }
     }
   ];
@@ -47,12 +38,18 @@ export class LogonPage implements OnInit {
   }
 
   onLoginClick(isOpen: boolean) {
-    console.log(`Attempting to log in with email: ${this.usernameInp}`);
-    this.authService.loginUser({ email: this.usernameInp, password: this.passwordInp }).subscribe({
+    const trimmedEmail = this.emailInp.trim();
+    const trimmedPassword = this.passwordInp.trim();
+    
+    console.log(`Attempting to log in with email: ${trimmedEmail}`);
+    
+    this.authService.loginUser({ email: trimmedEmail, password: trimmedPassword }).subscribe({
       next: (response: any) => {
+        console.log('Login response:', response);
         if (response.message === 'Login successful') {
           console.log('Login successful');
-          this.isAlertOpenSuccess = isOpen;
+          this.isAlertOpenFailed = false; // Ensure the failed alert is not open
+          this.navCtrl.navigateForward('/home');
         } else {
           console.log('Login failed');
           this.isAlertOpenFailed = isOpen;

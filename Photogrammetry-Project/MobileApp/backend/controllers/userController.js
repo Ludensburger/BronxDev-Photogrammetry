@@ -34,6 +34,7 @@ exports.addUser = (req, res) => {
 exports.loginUser = (req, res) => {
   const { email, password } = req.body;
   console.log(`Attempting to login user: ${email}`);
+
   db.get('SELECT * FROM users WHERE email = ? AND password = ?', [email, password], (err, row) => {
     if (err) {
       console.error('Error logging in user:', err.message);
@@ -42,7 +43,8 @@ exports.loginUser = (req, res) => {
     }
     if (row) {
       console.log('Login successful for user:', email);
-      res.json(row);
+      console.log('Retrieved user:', row);
+      res.json({ message: 'Login successful', user: row });
     } else {
       console.log('Login failed for user:', email);
       res.status(404).json({ error: 'User not found' });
