@@ -12,18 +12,16 @@
       <ion-item color="blue" lines="none">
         <ion-icon name="mail" slot="start"></ion-icon>
         <ion-input 
-          id="uName" 
+          [(ngModel)]="emailInp"
           type="email"
           placeholder="email@address.com"
           errorText="Invalid Email"
-          ngModel
-          email
           ></ion-input>
       </ion-item>
       <ion-item color="blue">
         <ion-icon name="lock-closed" slot="start"></ion-icon>
         <ion-input 
-          id="pWord" 
+          [(ngModel)]="passwordInp"
           type="Password" 
           placeholder="*****"
           ></ion-input>
@@ -39,13 +37,6 @@
         header="Login Failed"
         message="Please Input Again"
         [buttons]="alertButtonFailed"
-        (didDismiss)="onLoginClick(false)"
-      ></ion-alert>
-      <ion-alert
-        [isOpen]="isAlertOpenSuccess"
-        header="Login Success"
-        message="Welcome!"
-        [buttons]="alertButtonSuccess"
         (didDismiss)="onLoginClick(false)"
       ></ion-alert>
       </div>

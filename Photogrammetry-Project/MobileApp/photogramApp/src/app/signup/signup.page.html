@@ -12,25 +12,23 @@
       <ion-item color="blue">
         <ion-icon name="person-outline" slot="start"></ion-icon>
         <ion-input 
-          id="uName" 
+          [(ngModel)]="name" 
           placeholder="Input Username"
           ></ion-input>
       </ion-item>
       <ion-item color="blue" lines="none">
         <ion-icon name="mail" slot="start"></ion-icon>
         <ion-input 
-          id="eMail" 
+          [(ngModel)]="email" 
           type="email" 
           placeholder="Input Email"
           errorText="Invalid email"
-          ngModel
-          email
           ></ion-input>
       </ion-item>
       <ion-item color="blue">
         <ion-icon name="lock-closed" slot="start"></ion-icon>
         <ion-input 
-          id="pWord" 
+          [(ngModel)]="password"
           type="Password" 
           placeholder="*****"
           ></ion-input>
@@ -39,13 +37,13 @@
 
     <div id="buttons">
       <div class="width-limit">
-        <ion-button expand="block" id="sign-up" (click)="myClick(true)">Sign Up</ion-button>
+        <ion-button expand="block" (click)="onSignupClick()" id="sign-up">Sign Up</ion-button>
         <ion-alert
         [isOpen]="isAlertOpenSuccess"
         header="Success"
         message="Account has been created"
         [buttons]="alertButtons"
-        (didDismiss)="myClick(false)"
+        (didDismiss)="isAlertOpenSuccess = false"
       ></ion-alert>
       </div>
     </div>
